@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style type="text/css">
+    body
+    {
+      background-color:#ff8000;
+      font-size:20px;
+      font-family:"helvetica";
+    }
+    </style>
+  <title>Calculadora Binaria</title>
+  </head>
+  <body>
+
+    <h1>Calculadora binaria</h1>
+    <table>
+      <theader>
+      <tr>
+      <th>Introduzca el número <strong><br>DECIMAL:</br></strong></th>
+      <th>Primer número en BINARIO:</th>
+      <th>Escriba su mensaje en <strong>TEXT:</strong></th>
+      </tr>
+      <tr>
+      <th><input type="text" id="decimal" style="width:200px; height:40px" onkeypress="return validarDecimal(event)"></input></th>
+      <th><input type="text" id="bin1" style="width:200px; height:40px" onkeypress="return validarBinarios(event)"></input></th>
+      <th><input type="text" id="texto_libre" style="width:200px; height:40px"></input></th>
+      </tr>
+      <tr>
+      <th>Introduzca el número en <strong><br>BINARIO:</br></strong></th>
+      <th>Seleccione la <strong><br>Operación:</br></strong></th>
+      <th>Escriba su mensaje en BINARIO:</th>
+      </tr>
+      <tr>
+      <th><input type="text" id="binario" style="width:200px; height:40px" onkeypress="return validarBinarios(event)"></input></th>
+      <th>
+        <select name="operaciones" id="operaciones">
+        <option selected disabled hidden value=""</option>
+        <option>Suma(+)</option>
+        <option>Resta(-)</option>
+        <option>Multiplicación(*)</option>
+        <option>División(/)</option>
+        <option>Mover Bits a la izq(<<)</option>
+        <option>Mover Bits a la dere(>>)</option>
+        </select>
+      </th>
+      <th><input type="text" id="binario_resultado" style="width:200px; height:40px" onkeypress="return validarBinarios2(event)"></input></th>
+      </tr>
+      <tr>
+        <th>
+        </th>
+        <th>Segundo número en <strong>BINARIO:</strong></th>
+      </tr>
+      <tr>
+        <th>
+        </th>
+        <th><input type="text" id="bin2" style="width:200px; height:40px" onkeypress="return validarBinarios(event)"></input></th>
+      </tr>
+      <tr>
+        <th>
+        </th>
+        <th>Resultado:</th>
+      </tr>
+      <tr>
+        <th>
+        </th>
+        <th><input type="text" id="bin3" style="width:200px; height:40px" onkeydown="return validarResultadoBinario(event)"></input></th>
+      </tr>
+    </theader>
+    </table>
+    <script src="convBits.js"></script>
+  </body>
+</html>
